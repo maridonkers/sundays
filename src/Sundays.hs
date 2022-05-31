@@ -11,7 +11,7 @@ sundays y = do
     mapM_
         (\(_, s) -> putStrLn $ show s ++ "\t[ ] [ ] [ ] [x]")
         ( filter
-            (\(c, w) -> diffDays w c > 0 && (dayOfWeek w) == Sunday)
+            (\(c, w) -> diffDays w c > 0 && dayOfWeek w == Sunday)
             [ (cd, g)
             | day <- [1 .. daysyr]
             , let (m, d) = dayOfYearToMonthAndDay False day
