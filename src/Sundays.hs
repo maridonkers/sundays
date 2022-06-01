@@ -9,7 +9,7 @@ sundays y = do
     cd <- utctDay <$> getCurrentTime
     putStrLn "yyyy-mm-dd\t C   F   H   M"
     mapM_
-        (\(_, s) -> putStrLn $ show s ++ "\t[ ] [ ] [ ] [x]")
+        (\(_, s) -> putStrLn $ show s ++ "\t[ ] [ ] [ ] [ ]")
         ( filter
             (\(c, w) -> diffDays w c > 0 && dayOfWeek w == Sunday)
             [ (cd, g)
