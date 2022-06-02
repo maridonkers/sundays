@@ -17,7 +17,12 @@ args =
       )
 
 argsInfo :: OA.ParserInfo Args
-argsInfo = OA.info args OA.fullDesc
+argsInfo =
+  OA.info
+    args
+    ( OA.fullDesc
+        <> OA.progDesc "optional parameter [yyyy] which is the year."
+    )
 
 main :: IO ()
 main = do
